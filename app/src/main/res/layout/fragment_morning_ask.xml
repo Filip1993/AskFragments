@@ -1,0 +1,77 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f1f1f1"
+    tools:context=".MorningAskFragment"
+    android:fillViewport="false">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/panelAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/deep_orange_200"
+        android:orientation="vertical"
+        android:padding="16dp">
+        <!--android:background="#f1f1f1"-->
+
+        <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            card_view:cardCornerRadius="8dp"
+            card_view:cardElevation="16dp"
+            android:id="@+id/cvMorningAsk"
+            card_view:cardUseCompatPadding="true">
+            <!--card_view:cardBackgroundColor="@color/amber_100"-->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.SwitchCompat
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:checked="true"
+                    android:id="@+id/swMorningAsk" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="@string/how_do_you_feel_today"
+                    android:id="@+id/textView"
+                    android:layout_below="@+id/swMorningAsk"
+                    android:layout_centerHorizontal="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text=""
+                    android:fontFamily="casual"
+                    android:textSize="32dp"
+                    android:id="@+id/tvMorningAsk"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true" />
+
+                <android.support.v7.widget.AppCompatSeekBar
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:theme="@style/Theme.AppCompat"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentStart="true"
+                    android:paddingLeft="32dp"
+                    android:paddingRight="32dp"
+                    android:max="100"
+                    android:progress="50"
+                    android:id="@+id/sbMorningAsk"
+                    android:layout_marginBottom="32dp" />
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+</ScrollView>
